@@ -1,5 +1,5 @@
 class Caixa < ApplicationRecord
-  def withdraw(valor)
-    { valor => 1 }
+  def withdraw(value)
+    { value => 1 }
   end
 end

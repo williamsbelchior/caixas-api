@@ -4,14 +4,13 @@ class CaixaTest < ActiveSupport::TestCase
   setup do
     @caixa = Caixa.new
   end
-  test "withdraw 50" do
-    result = { 50 => 1 }
 
-    assert_equal result, @caixa.withdraw(50)
-  end
+  test "withdraw basic values" do
+    values = [5, 10, 20, 50, 100]
 
-  test "withdraw 5" do
-    result = { 5 => 1 }
-    assert_equal result, @caixa.withdraw(5)
+    values.each do |value|
+      result = {value => 1}
+      assert_equal result, @caixa.withdraw(value)
+    end
   end
 end
