@@ -15,4 +15,15 @@ class Caixa < ApplicationRecord
 
     nil
   end
+
+  #TODO: Adicionar no hash a key do valor subtraido com valor +1 ao subtrair.
+  # def withdraw(value)
+  #
+  #   NOTES.reverse_each do |note|
+  #     return {value => 1} if note - value == 0
+  #     return {value => 2} if value - note == value
+  #
+  #
+  #   end
+  # end
 end
