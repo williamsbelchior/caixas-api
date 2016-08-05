@@ -17,5 +17,12 @@ class CaixaTest < ActiveSupport::TestCase
   test 'withdraw two notes' do
     result = { 20 => 2 }
     assert_equal result, @caixa.withdraw(40)
+ 
   end
+
+  test 'withdraw three notes' do
+    result = { 20 => 3 }
+    assert_equal result, @caixa.withdraw(60)
+end
+
 end
