@@ -4,6 +4,11 @@ class Caixa < ApplicationRecord
   def withdraw(value)
     return { value => 1 } if NOTES.include?(value)
 
-    [2, 3, 4, 5, 6, 7, 8, 9].each { |time| return { (value/time) => time } if value % time == 0 }
+    (2..10).each do |amount|
+      note = value / amount
+      return { note => amount } if value % amount == 0 && NOTES.include?(note)
+    end
+
+    nil
   end
 end
